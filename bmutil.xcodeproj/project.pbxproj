@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B672F771984A3A5002A8F45 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672F761984A3A5002A8F45 /* main.swift */; };
 		2B672F7E1984C232002A8F45 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672F7D1984C232002A8F45 /* CommandLine.swift */; };
+		2B672F801984E471002A8F45 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B672F7F1984E471002A8F45 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		2B672F731984A3A5002A8F45 /* bmutil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bmutil; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B672F761984A3A5002A8F45 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2B672F7D1984C232002A8F45 /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		2B672F7F1984E471002A8F45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 		2B672F6A1984A3A5002A8F45 = {
 			isa = PBXGroup;
 			children = (
+				2B672F7F1984E471002A8F45 /* README.md */,
 				2B672F751984A3A5002A8F45 /* bmutil */,
 				2B672F741984A3A5002A8F45 /* Products */,
 			);
@@ -121,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B672F801984E471002A8F45 /* README.md in Sources */,
 				2B672F771984A3A5002A8F45 /* main.swift in Sources */,
 				2B672F7E1984C232002A8F45 /* CommandLine.swift in Sources */,
 			);
@@ -237,6 +241,7 @@
 				2B672F7C1984A3A5002A8F45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

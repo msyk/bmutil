@@ -2,7 +2,7 @@
 //  CommandLine.swift
 //  bmutil
 //
-//  Created by 新居雅行 on 2014/07/27.
+//  Created by Masayuki Nii on 2014/07/27.
 //  Copyright (c) 2014年 msyk.net. All rights reserved.
 //
 
