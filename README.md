@@ -6,12 +6,13 @@ The command line utility for the bookmark file in OS X.
 
 ##Usage:
 ```
-bmutil -c newFile targetFile*
+bmutil -c newFile targetFile
 ```
-It creates new bookmark file refering to the path "targetFile" at the path "newFile".
-(This feature doesn't work so far.)
+- It creates new bookmark file refering to the path "targetFile".
+- The file will be created at the path "newFile".
+- (This feature doesn't work so far.)
 
 ```
-bmutil -r targetFile*
+bmutil -r targetFile
 ```
-It returns the path that refferd by the path "targetFile"
+- It returns the path that refferd by the path "targetFile"
