@@ -15,29 +15,26 @@ class CommandLine   {
     public var parameters: [String:String] = [:]
     
     init(_ optionArgs: String)    {
-        var indexTarget: Int = 0
-        var indexOptions: Int = 0
         var nextItemParam: Bool = false
         var previousOption: String = ""
-        for index in 0..<C_ARGC {
-            let oneItem = String.fromCString(C_ARGV[Int(index)])
-            let itemString: NSString = oneItem!
+        for oneItem in ProcessInfo.processInfo.arguments {
+            let itemString: NSString = oneItem as NSString
             if itemString.hasPrefix("-") {
-                let indexOptions: String = itemString.substringFromIndex(1)
-                if optionArgs.rangeOfString(indexOptions + ":")    {
+                let indexOptions: String = itemString.substring(from: 1)
+                if (optionArgs.range(of: indexOptions + ":") != nil)    {
                     nextItemParam = true
                     previousOption = indexOptions
-                    opts += indexOptions
-                } else if optionArgs.rangeOfString(indexOptions)    {
-                    opts += indexOptions
+                    opts = opts + [indexOptions]
+                } else if (optionArgs.range(of: indexOptions) != nil)   {
+                    opts = opts + [indexOptions]
                 } else {
-                    undefinedOpts += indexOptions
+                    undefinedOpts = undefinedOpts + [indexOptions]
                 }
             } else if nextItemParam    {
                 nextItemParam = false;
-                parameters[previousOption] = oneItem!
+                parameters[previousOption] = oneItem
             } else {
-                targets += oneItem!
+                targets = targets + [oneItem]
             }
         }
     }
@@ -46,17 +43,17 @@ class CommandLine   {
 func testCommandLine()  {
     let params = CommandLine("ac:")
     for target in params.targets {
-        println("target=\(target)")
+        print("target=\(target)")
     }
     for opt in params.opts {
-        if (params.parameters[opt]) {
-            println("option=\(opt)=\(params.parameters[opt])")
+        if ((params.parameters[opt]) != nil) {
+            print("option=\(opt)=\(String(describing: params.parameters[opt]))")
         } else {
-            println("option=\(opt)")
+            print("option=\(opt)")
         }
     }
     for opt in params.undefinedOpts {
-        println("option=\(opt)")
+        print("option=\(opt)")
     }
 }
 

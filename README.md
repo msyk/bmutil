@@ -18,3 +18,4 @@ bmutil -r targetFile
 
 ##History
 - July 27, 2014: First Release for OS X Yosemite with Swift!
+- April 13, 2019: Modify for Swift 5 with macOS Mojave
